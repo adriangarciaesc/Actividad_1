@@ -1,0 +1,10 @@
+C:\Users\adria\Desktop\Visual Studio Archivos\T4_P3_garcia_adrian\T4_P3_garcia_adrian\bin\Debug\T4_P3_garcia_adrian.exe.config
+C:\Users\adria\Desktop\Visual Studio Archivos\T4_P3_garcia_adrian\T4_P3_garcia_adrian\bin\Debug\T4_P3_garcia_adrian.exe
+C:\Users\adria\Desktop\Visual Studio Archivos\T4_P3_garcia_adrian\T4_P3_garcia_adrian\bin\Debug\T4_P3_garcia_adrian.pdb
+C:\Users\adria\Desktop\Visual Studio Archivos\T4_P3_garcia_adrian\T4_P3_garcia_adrian\obj\Debug\T4_P3_garcia_adrian.csproj.AssemblyReference.cache
+C:\Users\adria\Desktop\Visual Studio Archivos\T4_P3_garcia_adrian\T4_P3_garcia_adrian\obj\Debug\T4_P3_garcia_adrian.Form1.resources
+C:\Users\adria\Desktop\Visual Studio Archivos\T4_P3_garcia_adrian\T4_P3_garcia_adrian\obj\Debug\T4_P3_garcia_adrian.Properties.Resources.resources
+C:\Users\adria\Desktop\Visual Studio Archivos\T4_P3_garcia_adrian\T4_P3_garcia_adrian\obj\Debug\T4_P3_garcia_adrian.csproj.GenerateResource.cache
+C:\Users\adria\Desktop\Visual Studio Archivos\T4_P3_garcia_adrian\T4_P3_garcia_adrian\obj\Debug\T4_P3_garcia_adrian.csproj.CoreCompileInputs.cache
+C:\Users\adria\Desktop\Visual Studio Archivos\T4_P3_garcia_adrian\T4_P3_garcia_adrian\obj\Debug\T4_P3_garcia_adrian.exe
+C:\Users\adria\Desktop\Visual Studio Archivos\T4_P3_garcia_adrian\T4_P3_garcia_adrian\obj\Debug\T4_P3_garcia_adrian.pdb
