@@ -23,3 +23,13 @@ bin/
 obj/
 
 .vs/
+
+# Carpetas de compilación
+bin/
+obj/
+
+# Archivos de usuario y configuración local
+*.user
+*.suo
+*.userosscache
+
