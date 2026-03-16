@@ -37,6 +37,12 @@
             this.btnCompletar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnLimpiarCampos = new System.Windows.Forms.Button();
+            this.chkPrioridadAlta = new System.Windows.Forms.CheckBox();
+            this.lblContadorTareas = new System.Windows.Forms.Label();
+            this.lblnoProgramar = new System.Windows.Forms.Label();
+            this.cmbCategoria = new System.Windows.Forms.ComboBox();
+            this.labnoProgramar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // textBoxTitulo
@@ -51,19 +57,19 @@
             this.textBoxDescripcion.Location = new System.Drawing.Point(90, 67);
             this.textBoxDescripcion.Multiline = true;
             this.textBoxDescripcion.Name = "textBoxDescripcion";
-            this.textBoxDescripcion.Size = new System.Drawing.Size(253, 228);
+            this.textBoxDescripcion.Size = new System.Drawing.Size(253, 207);
             this.textBoxDescripcion.TabIndex = 1;
             // 
             // dateTimePickerFecha
             // 
-            this.dateTimePickerFecha.Location = new System.Drawing.Point(90, 309);
+            this.dateTimePickerFecha.Location = new System.Drawing.Point(90, 280);
             this.dateTimePickerFecha.Name = "dateTimePickerFecha";
             this.dateTimePickerFecha.Size = new System.Drawing.Size(253, 22);
             this.dateTimePickerFecha.TabIndex = 2;
             // 
             // btnAñadir
             // 
-            this.btnAñadir.Location = new System.Drawing.Point(129, 339);
+            this.btnAñadir.Location = new System.Drawing.Point(125, 365);
             this.btnAñadir.Name = "btnAñadir";
             this.btnAñadir.Size = new System.Drawing.Size(165, 46);
             this.btnAñadir.TabIndex = 3;
@@ -75,9 +81,9 @@
             // 
             this.listBoxTareas.FormattingEnabled = true;
             this.listBoxTareas.ItemHeight = 16;
-            this.listBoxTareas.Location = new System.Drawing.Point(390, 39);
+            this.listBoxTareas.Location = new System.Drawing.Point(366, 71);
             this.listBoxTareas.Name = "listBoxTareas";
-            this.listBoxTareas.Size = new System.Drawing.Size(381, 292);
+            this.listBoxTareas.Size = new System.Drawing.Size(422, 260);
             this.listBoxTareas.TabIndex = 4;
             // 
             // btnEliminar
@@ -110,7 +116,6 @@
             this.label1.Size = new System.Drawing.Size(43, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "Titulo:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -121,11 +126,80 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Descripcion:";
             // 
+            // btnLimpiarCampos
+            // 
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(558, 342);
+            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(89, 43);
+            this.btnLimpiarCampos.TabIndex = 9;
+            this.btnLimpiarCampos.Text = "Limpiar Campos";
+            this.btnLimpiarCampos.UseVisualStyleBackColor = true;
+            // 
+            // chkPrioridadAlta
+            // 
+            this.chkPrioridadAlta.AutoSize = true;
+            this.chkPrioridadAlta.Location = new System.Drawing.Point(150, 339);
+            this.chkPrioridadAlta.Name = "chkPrioridadAlta";
+            this.chkPrioridadAlta.Size = new System.Drawing.Size(110, 20);
+            this.chkPrioridadAlta.TabIndex = 10;
+            this.chkPrioridadAlta.Text = "Prioridad Alta";
+            this.chkPrioridadAlta.UseVisualStyleBackColor = true;
+            // 
+            // lblContadorTareas
+            // 
+            this.lblContadorTareas.AutoSize = true;
+            this.lblContadorTareas.Location = new System.Drawing.Point(493, 45);
+            this.lblContadorTareas.Name = "lblContadorTareas";
+            this.lblContadorTareas.Size = new System.Drawing.Size(91, 16);
+            this.lblContadorTareas.TabIndex = 11;
+            this.lblContadorTareas.Text = "labelCantidad";
+            // 
+            // lblnoProgramar
+            // 
+            this.lblnoProgramar.AutoSize = true;
+            this.lblnoProgramar.Location = new System.Drawing.Point(376, 45);
+            this.lblnoProgramar.Name = "lblnoProgramar";
+            this.lblnoProgramar.Size = new System.Drawing.Size(124, 16);
+            this.lblnoProgramar.TabIndex = 12;
+            this.lblnoProgramar.Text = "Número de Tareas:";
+            // 
+            // cmbCategoria
+            // 
+            this.cmbCategoria.FormattingEnabled = true;
+            this.cmbCategoria.Items.AddRange(new object[] {
+            "Entornos de Desarrollo",
+            "Base de Datos",
+            "Sistemas Informaticos",
+            "Programacion",
+            "Lenguaje de Marcas",
+            "Intermodular",
+            "FOL",
+            "Ingles"});
+            this.cmbCategoria.Location = new System.Drawing.Point(202, 308);
+            this.cmbCategoria.Name = "cmbCategoria";
+            this.cmbCategoria.Size = new System.Drawing.Size(121, 24);
+            this.cmbCategoria.TabIndex = 13;
+            // 
+            // labnoProgramar
+            // 
+            this.labnoProgramar.AutoSize = true;
+            this.labnoProgramar.Location = new System.Drawing.Point(105, 311);
+            this.labnoProgramar.Name = "labnoProgramar";
+            this.labnoProgramar.Size = new System.Drawing.Size(91, 16);
+            this.labnoProgramar.TabIndex = 14;
+            this.labnoProgramar.Text = "Tipo de tarea:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labnoProgramar);
+            this.Controls.Add(this.cmbCategoria);
+            this.Controls.Add(this.lblnoProgramar);
+            this.Controls.Add(this.lblContadorTareas);
+            this.Controls.Add(this.chkPrioridadAlta);
+            this.Controls.Add(this.btnLimpiarCampos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCompletar);
@@ -154,6 +228,12 @@
         private System.Windows.Forms.Button btnCompletar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnLimpiarCampos;
+        private System.Windows.Forms.CheckBox chkPrioridadAlta;
+        private System.Windows.Forms.Label lblContadorTareas;
+        private System.Windows.Forms.Label lblnoProgramar;
+        private System.Windows.Forms.ComboBox cmbCategoria;
+        private System.Windows.Forms.Label labnoProgramar;
     }
 }
 

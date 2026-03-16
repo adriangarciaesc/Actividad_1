@@ -21,7 +21,11 @@ namespace T4_P3_garcia_adrian
         }
 
         private void Form1_Load(object sender, EventArgs e)
-        {
+        { 
+
+            cmbCategoria.SelectedIndex = 0;
+
+            lblContadorTareas.Text = "0";
 
         }
 
@@ -30,6 +34,8 @@ namespace T4_P3_garcia_adrian
             string titulo = textBoxTitulo.Text;
             string descripcion = textBoxDescripcion.Text;
             DateTime fecha = dateTimePickerFecha.Value;
+            string categoria = cmbCategoria.Text;
+            bool prioridadAlta = chkPrioridadAlta.Checked;
 
             if (titulo == "")
             {
@@ -37,13 +43,14 @@ namespace T4_P3_garcia_adrian
                 return;
             }
 
-            Tarea nueva = new Tarea(titulo, descripcion, fecha);
+            Tarea nueva = new Tarea(titulo, descripcion, fecha, categoria, prioridadAlta);
             gestor.AñadirTarea(nueva);
 
             listBoxTareas.Items.Add(nueva);
 
-            textBoxTitulo.Clear();
-            textBoxDescripcion.Clear();
+            ActualizarContador();
+
+            LimpiarCampos();
 
         }
 
@@ -62,6 +69,8 @@ namespace T4_P3_garcia_adrian
             gestor.EliminarTarea(indice);
             listBoxTareas.Items.RemoveAt(indice);
 
+            ActualizarContador();
+
         }
 
         private void btnCompletar_Click(object sender, EventArgs e)
@@ -79,10 +88,24 @@ namespace T4_P3_garcia_adrian
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        void ActualizarContador()
         {
-
+            lblContadorTareas.Text = gestor.ObtenerTareas().Count.ToString();
         }
+
+        private void btnLimpiarCampos_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+        }
+
+        void LimpiarCampos()
+        {
+            textBoxTitulo.Clear();
+            textBoxDescripcion.Clear();
+            chkPrioridadAlta.Checked = false;
+            cmbCategoria.SelectedIndex = 0;
+        }
+
     }
 }
 
@@ -95,19 +118,25 @@ namespace T4_P3_garcia_adrian
         public string Descripcion { get; set; }
         public bool Completada { get; set; }
         public DateTime Fecha { get; set; }
+        public string Tipo { get; set; }
+        public bool PrioridadAlta { get; set; }
 
-        public Tarea(string titulo, string descripcion, DateTime fecha)
+        public Tarea(string titulo, string descripcion, DateTime fecha, string tipo, bool prioridad)
         {
             Titulo = titulo;
             Descripcion = descripcion;
             Fecha = fecha;
+            Tipo = tipo;
+            PrioridadAlta = prioridad;
             Completada = false;
         }
 
         public override string ToString()
         {
             string estado = Completada ? "Completada" : "No completada";
-            return $"{Titulo} - {Descripcion} - {estado} - {Fecha.ToShortDateString()}";
+            string prioridad = PrioridadAlta ? "Prioridad Alta" : "";
+
+            return $"{Titulo} - {Descripcion} - {Tipo} - {prioridad} - {estado} - {Fecha.ToShortDateString()}";
         }
     }
 }
@@ -144,6 +173,11 @@ namespace T4_P3_garcia_adrian
         public List<Tarea> ObtenerTareas()
         {
             return tareas;
+        }
+
+        public int NumeroTareas()
+        {
+            return tareas.Count;
         }
     }
 }
