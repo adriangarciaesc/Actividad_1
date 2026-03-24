@@ -16,6 +16,7 @@ namespace T4_P3_garcia_adrian
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            Conslole.WriteLine("Registro Implementado");
             Application.Run(new Form1());
         }
     }
