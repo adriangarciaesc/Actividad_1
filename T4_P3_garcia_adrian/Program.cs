@@ -16,7 +16,10 @@ namespace T4_P3_garcia_adrian
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            //Funcionalidades de login y registro
             Console.WriteLine("Login Implementado");
+            Conslole.WriteLine("Registro Implementado");
+
             Application.Run(new Form1());
         }
     }
